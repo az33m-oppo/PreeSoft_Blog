@@ -95,6 +95,13 @@ class PostController extends Controller
                 'message' => 'You are not authorized to Delete this comment'
             ], 403);
         }
+         // Delete all comments associated with the post
+    $post->comments()->each(function ($comment) {
+        // Delete all likes associated with each comment
+        $comment->likes()->delete();
+        // Delete the comment itself
+        $comment->delete();
+    });
         // Delete the post
         $post->delete();
 

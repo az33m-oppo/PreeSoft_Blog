@@ -32,6 +32,11 @@
         .navbar-custom .nav-link.active {
             font-weight: bold;
         }
+        footer{
+            position: absolute;
+    bottom: 0;
+    width: 100%;
+        }
     </style>
 </head>
 <body>
