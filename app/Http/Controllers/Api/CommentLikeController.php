@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Comment;
 use App\Models\CommentLike;
 use Illuminate\Support\Facades\Auth;
+
 class CommentLikeController extends Controller
 {
     // Like a comment

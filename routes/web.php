@@ -40,7 +40,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/posts/all', [PostController::class, 'index'])->name('posts.index');
     Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');
     Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.detail');
-    // You can add more routes here that require authentication
+    
+
+
+    Route::get('/users-with-likes', [PostController::class, 'showUsersWithLikes'])->name('users.like');
+
 });
 
 

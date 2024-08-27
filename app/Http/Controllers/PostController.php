@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\User;
 class PostController extends Controller
 {
     public function create()
@@ -24,5 +24,11 @@ public function show($id)
 {
     // Return the edit view with the post ID
     return view('posts.post_detail', ['postId' => $id]);
+}
+
+public function showUsersWithLikes()
+{
+    $usersWithLikedCommentsOnPosts = User::whereHas('posts.comments.likes')->get();
+    return view('users.with_liked_comments', compact('usersWithLikedCommentsOnPosts'));
 }
 }

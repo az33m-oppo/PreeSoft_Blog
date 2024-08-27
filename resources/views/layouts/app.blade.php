@@ -32,11 +32,7 @@
         .navbar-custom .nav-link.active {
             font-weight: bold;
         }
-        footer{
-            position: absolute;
-    bottom: 0;
-    width: 100%;
-        }
+      
     </style>
 </head>
 <body>
@@ -55,6 +51,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{route('posts.create')}}">Add New Post</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('users.like')}}">All user with likes</a>
                         </li>
                     </ul>
                     @endif
